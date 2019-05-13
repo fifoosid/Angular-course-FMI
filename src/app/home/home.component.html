@@ -1,0 +1,14 @@
+<add-new (addNew)="addNew($event)"></add-new>
+
+<div class="posts">
+  <div class="post" *ngFor="let post of this.posts">
+    <div>Auhtor: {{ post.author }}</div>
+    <div>Title: {{ post.title }}</div>
+    <div>Text: {{ post.text }}</div>
+    <div>Tags: {{ post.tags }}</div>
+    <div>URL: {{ post.url }}</div>
+    <div>Status: {{ post.status }}</div>
+    <button (click)="deleteItem(post)">Delete</button>
+    <button (click)="editItem(post)">Edit</button>
+  </div>
+</div>
